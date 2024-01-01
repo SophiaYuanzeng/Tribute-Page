@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+#main {
+  display: flex;
+  min-width: 300px;
+}
+
+/* left panel */
+h1, h2 {
+  text-align: center;
+}
+
+.timeline:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 50%;
+			width: 2px;
+			background: white;
+		} /* create vertical line */
+
+.timeline {
+			position: relative;
+			padding: 20px 0;
+			line-height: 24px;
+            overflow: hidden;
+		} 
+
+li {
+  width:48%;
+  margin:10px;
+  display: inline-block;
+}
+
+.timeline h3, p {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline .left {
+  text-align: right;
+  margin-left: 1%;
+}
+
+.timeline .right {
+  float: right;
+  margin-right: 1%;
+} 
+
+/* right panel */
+#tribute-info {
+ width: 40%;
+ padding: 20px;
+}
+
+#img-div {
+ width: 60%;
+ padding-bottom: 20px;
+}
+
+#image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 700px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+#img-caption {
+  padding: 20px 20px 20px 0;
+}
+
+#tribute-link {
+  text-decoration: none;
+}
+
+#tribute-link button:hover {
+  background-color: gray;
+}
+
+
+@media (max-width:768px) {
+  #main {
+    display: block;
+  }
+  #tribute-info {
+    width: 100%;
+  }
+  #img-div {
+    width: 100%;
+  }
+  #img-caption {
+    padding: 20px;
+  }
+  #tribute-link button {
+   display: block;
+   margin: auto;
+  }
+}
